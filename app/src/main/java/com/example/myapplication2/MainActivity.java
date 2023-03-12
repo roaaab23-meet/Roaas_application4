@@ -36,30 +36,31 @@ public class MainActivity extends AppCompatActivity {
         btnSignin.setOnClickListener(Listen2);
         btnSubmit.setOnClickListener(Listen3);
 
-        View.OnClickListener Listen3=new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1=new Intent(getApplicationContext(), SignUpActivity.class);
-                startActivity(intent1);
-            }
+
+    }
+    View.OnClickListener Listen3=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent1=new Intent(getApplicationContext(), SignUpActivity.class);
+            startActivity(intent1);
+        }
+    };
+
+
+    View.OnClickListener Listen1 =new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            etEmail.setText(etEmail.getText());
+            etPassword.setText(etPassword.getText());
+            Intent intent2=new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(intent2);
         }
 
-
-        View.OnClickListener Listen1 =new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 etEmail.setText(etEmail.getText());
-                 etPassword.setText(etPassword.getText());
-                 Intent intent2=new Intent(getApplicationContext(), HomeActivity.class);
-                 startActivity(intent2);
-             }
-
-         };
-         View.OnClickListener Listen2 =new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 Toast.makeText(getApplicationContext(), "signup is under construction", Toast.LENGTH_LONG).show();
-             }
-         };
-    }
+    };
+    View.OnClickListener Listen2 =new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(getApplicationContext(), "signup is under construction", Toast.LENGTH_LONG).show();
+        }
+    };
 }
